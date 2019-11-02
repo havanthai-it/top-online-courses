@@ -1,0 +1,37 @@
+@import '../../../assets/scss/global.scss';
+
+.header-view {
+  background-color: $defaultBgColor;
+  height: 80px;
+  width: 100%;
+
+  header {
+    padding: 14px 0px;
+
+    .logo-container {
+      width: 128px;
+      float: left;
+    }
+
+    .nav-horizontal {
+      font-weight: 600;
+      float: left;
+      ul {
+        li {
+          padding: 0px 20px 0px 0px;
+          float: left;
+        }
+
+        li:hover {
+          color: $primaryColor;
+        }
+      }
+    }
+
+    &:after {
+      clear: both;
+      content: "";
+      display: block;
+    }
+  }
+}
