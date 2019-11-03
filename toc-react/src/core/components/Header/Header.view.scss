@@ -2,28 +2,35 @@
 
 .header-view {
   background-color: $defaultBgColor;
-  height: 80px;
+  height: 55px;
+  padding: 10px 0px;
   width: 100%;
 
   header {
-    padding: 14px 0px;
+    position: relative;
 
     .logo-container {
-      width: 128px;
-      float: left;
+      color: $defaultBoldTextColor;
+      width: 300px;
+      margin: auto;
+      font-weight: 600;
+      font-size: 120%;
+      letter-spacing: 0.1em;
     }
 
     .nav-horizontal {
-      font-weight: 600;
-      float: left;
-      ul {
-        li {
-          padding: 0px 20px 0px 0px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      .nav-ul {
+        .nav-li {
+          padding: 0;
+          margin-right: 20px;
           float: left;
-        }
 
-        li:hover {
-          color: $primaryColor;
+          button {
+            font-weight: 600;
+          }
         }
       }
     }

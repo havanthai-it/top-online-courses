@@ -1,10 +1,13 @@
+@import './assets/scss/global.scss';
+
 html {
-  font-family: 'Work Sans', sans-serif;
+  font-family: 'Nunito', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-size: 18px;
+  letter-spacing: 0.02em;
   line-height: 2em;
-  color: #232D41;
+  color: $defaultTextColor;
   min-height: 100vh;
 }
 
@@ -16,7 +19,7 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 
-div {
+div, header, footer {
   margin: 0;
   padding: 0;
   box-sizing: border-box;

@@ -12,11 +12,9 @@ class FooterView extends React.Component {
   render() {
     return (
       <div className="footer-view">
-        <Container maxWidth="lg">
-          <footer>
-            
-          </footer>
-        </Container>
+        <footer>
+          
+        </footer>
       </div>
     );
   }

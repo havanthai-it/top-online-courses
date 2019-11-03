@@ -11,10 +11,8 @@ class BodyView extends React.Component {
 
   render() {
     return (
-      <div className="footer-view">
-        <Container maxWidth="lg">
-          <RouterOutlet />
-        </Container>
+      <div className="body-view">
+        <RouterOutlet />
       </div>
     );
   }

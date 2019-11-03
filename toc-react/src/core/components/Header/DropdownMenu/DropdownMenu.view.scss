@@ -1,0 +1,39 @@
+@import '../../../../assets/scss/global.scss';
+
+.dropdown-menu-view {
+  z-index: 9;
+  position: absolute;
+  width: 480px;
+  box-shadow: 0px 4px 10px #cccccc;
+  background-color: $defaultBgColor;
+
+  ul {
+    width: 240px;
+    padding: 16px 0px;
+    float: left;
+    li {
+      padding: 0px 0px 0px 20px;
+      height: 36px;
+      cursor: pointer;
+
+      &:hover {
+        background-color: $secondaryBgColor;
+        font-weight: 600;
+      }
+    }
+  }
+
+  .category-ul {
+    background-color: $defaultBgColor;
+  }
+  .topic-ul {
+    background-color: $defaultBgColor2;
+  }
+
+  .MuiSvgIcon-root {
+    color: #bababa;
+    font-size: 1.4em;
+    float: right;
+    margin-top: 5px;
+  }
+}
