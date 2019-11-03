@@ -5,7 +5,7 @@ const config = {
     port: process.env.PORT || 4000
   },
   db: {
-    host: process.env.DB_HOST || '127.0.0.1',
+    host: process.env.DB_HOST || 'localhost',
     port: process.env.DB_PORT || 27017,
     username: process.env.DB_USER || 'havanthai',
     password: process.env.DB_PASS || 'havanthai',

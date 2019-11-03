@@ -4,18 +4,20 @@ const cors = require('cors');
 const morgan = require('morgan');
 const bodyParser = require('body-parser');
 
-// const Database = require('./db/database');
-// const userRoutes = require('./api/user/user.route');
+const Database = require('./db/database');
+const courseRoutes = require('./api/course/course.route');
+const categoryRoutes = require('./api/category/category.route');
 
 // Connect to database
-// new Database().connect();
+Database.connect();
 
 app.use(morgan('dev')); // Write log request in console
 app.use(cors());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-// app.use('/users', userRoutes);
+app.use('/course', courseRoutes);
+app.use('/category', categoryRoutes);
 
 app.use((req, res, next) => {
   const error = new Error('Not found!');
