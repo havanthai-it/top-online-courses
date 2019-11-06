@@ -1,8 +1,8 @@
-import ACTION from '../../redux/action-pool';
+import actionPool from '../../redux/actionPool';
 
 const sampleAction = (sample) => {
   return {
-    type: ACTION.HOME_SAMPLE_ACTION,
+    type: actionPool.HOME_SAMPLE_ACTION,
     payload: {
       sample: sample
     }

@@ -1,4 +1,4 @@
-const ACTION = {
+const actionPool = {
 
   /*---HEADER---*/
   /*---END HEADER---*/
@@ -9,4 +9,4 @@ const ACTION = {
 
 }
 
-export default ACTION;
+export default actionPool;
