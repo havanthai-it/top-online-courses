@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { Button } from '@material-ui/core';
 
 import DropdownMenu from './DropdownMenu/DropdownMenu.container';
+import CategoryService from '../../../services/category.service';
 
 import './Header.view.scss';
 
@@ -11,23 +12,14 @@ class HeaderView extends React.Component {
     super(props);
     this.state = {
       showDropDownMenu: false,
-
-      categories: [
-        { 
-          name: 'IT & Software',
-          topics: [
-            { name: "Web Development" },
-            { name: "Mobile Development" },
-            { name: "Mobile Development" }
-          ]
-        },
-        { 
-          name: 'Digital Marketing',
-          topics: [
-          ]
-        }
-      ]
+      categories: []
     }
+  }
+
+  componentWillMount() {
+    CategoryService.get_many().then((response) => {
+      this.setState({ categories: response.data });
+    });
   }
 
   render() {
@@ -45,7 +37,7 @@ class HeaderView extends React.Component {
                 onMouseLeave={() => this.setState({ showDropDownMenu: false })}>
                 <Button color="primary">Categories</Button>
                 {
-                  this.state.showDropDownMenu
+                  this.state.showDropDownMenu && this.state.categories.length > 0
                   ? <DropdownMenu categories={this.state.categories} />
                   : null
                 }

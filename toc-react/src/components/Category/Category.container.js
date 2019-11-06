@@ -2,15 +2,15 @@ import { connect } from 'react-redux';
 import CategoryView from './Category.view';
 
 const mapStateToProps = (state) => {
-    return {
+  return {
 
-    };
+  };
 }
 
 const mapDispatchToProps = (dispatch) => {
-    return {
+  return {
 
-    };
+  };
 }
 
 const Category = connect(mapStateToProps, mapDispatchToProps)(CategoryView);

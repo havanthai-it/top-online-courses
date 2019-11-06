@@ -3,14 +3,12 @@
 .dropdown-menu-view {
   z-index: 9;
   position: absolute;
-  width: 480px;
   box-shadow: 0px 4px 10px #cccccc;
   background-color: $defaultBgColor;
 
   ul {
-    width: 240px;
+    width: 260px;
     padding: 16px 0px;
-    float: left;
     li {
       padding: 0px 0px 0px 20px;
       height: 36px;
@@ -23,11 +21,11 @@
     }
   }
 
-  .category-ul {
-    background-color: $defaultBgColor;
+  .category-ul-container {
+    background-color: #fefefe;
   }
-  .topic-ul {
-    background-color: $defaultBgColor2;
+  .topic-ul-container {
+    background-color: #f8f8f8;
   }
 
   .MuiSvgIcon-root {

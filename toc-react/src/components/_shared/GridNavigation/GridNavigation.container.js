@@ -3,15 +3,15 @@ import { connect } from 'react-redux';
 import GridNavigationView from './GridNavigation.view';
 
 const mapStateToProps = (state) => {
-    return {
+  return {
 
-    };
+  };
 }
 
 const mapDispatchToProps = (dispatch) => {
-    return {
+  return {
 
-    };
+  };
 }
 
 const GridNavigation = connect(mapStateToProps, mapDispatchToProps)(GridNavigationView);

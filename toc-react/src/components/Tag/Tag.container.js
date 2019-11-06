@@ -2,15 +2,15 @@ import { connect } from 'react-redux';
 import TagView from './Tag.view';
 
 const mapStateToProps = (state) => {
-    return {
+  return {
 
-    };
+  };
 }
 
 const mapDispatchToProps = (dispatch) => {
-    return {
+  return {
 
-    };
+  };
 }
 
 const Tag = connect(mapStateToProps, mapDispatchToProps)(TagView);

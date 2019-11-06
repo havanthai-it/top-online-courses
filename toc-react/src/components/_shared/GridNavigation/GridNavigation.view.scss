@@ -1,7 +1,18 @@
 @import '../../../assets/scss/global.scss';
 
 .grid-navigation-view {
-    .grid-navigation-item {
-        border: solid 3px $primaryColor;
+  padding: 16px;
+
+  .grid-navigation-item {
+    background-color: #ffffff;
+    padding: 16px;
+    box-shadow: 0px 1px 8px #cccccc;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $primaryColor;
+      color: #cccccc;
+      box-shadow: 0px 1px 8px #777777;
     }
+  }
 }
