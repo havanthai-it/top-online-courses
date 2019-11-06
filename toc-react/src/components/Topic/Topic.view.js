@@ -7,6 +7,11 @@ class TopicView extends React.Component {
         super(props);
     }
 
+    componentWillMount() {
+        const { match: { params } } = this.props;
+        console.log(params);
+    }
+
     render() {
         return (
             <div className="topic-view">

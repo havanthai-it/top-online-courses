@@ -7,6 +7,11 @@ class TagView extends React.Component {
         super(props);
     }
 
+    componentWillMount() {
+        const { match: { params } } = this.props;
+        console.log(params);
+    }
+
     render() {
         return (
             <div className="tag-view">
