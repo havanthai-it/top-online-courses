@@ -1,10 +1,12 @@
 const courseRoutes = require('./api/course/course.route');
 const categoryRoutes = require('./api/category/category.route');
+const platformRoutes = require('./api/platform/platform.route');
 
 const initRoutes = (app) => {
 
   app.use('/api/v1/course', courseRoutes);
   app.use('/api/v1/category', categoryRoutes);
+  app.use('/api/v1/platform', platformRoutes);
 
   app.use((req, res, next) => {
     const error = new Error('Not found!');

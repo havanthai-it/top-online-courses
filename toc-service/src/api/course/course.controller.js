@@ -20,12 +20,9 @@ exports.getAll = async (req, res) => {
 }
 
 exports.insert = async (req, res) => {
-  const course = new Course({
-    _id: mongoose.Types.ObjectId(),
-    name: req.body.name,
-    tags: req.body.tags,
-    platform: req.body.platform,
-  });
+  // Should validate req.body first
+  req.body._id = mongoose.Types.ObjectId();
+  const course = new Course(req.body);
 
   const result = await CourseService.insert(course);
   return res.status(201).json(result);

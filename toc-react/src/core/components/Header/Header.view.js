@@ -17,7 +17,7 @@ class HeaderView extends React.Component {
   }
 
   componentWillMount() {
-    CategoryService.get_many().then((response) => {
+    CategoryService.getMany().then((response) => {
       this.setState({ categories: response.data });
     });
   }

@@ -3,7 +3,10 @@ import axios from 'axios';
 
 const CategoryService = {};
 
-CategoryService.get_many = async () => {
+/**
+ * Get all categories
+ */
+CategoryService.getMany = async () => {
   const config = {
     method: 'GET',
     url: api.category

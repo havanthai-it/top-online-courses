@@ -40,7 +40,9 @@ const courseSchema = mongoose.Schema({
 
   description: { type: String, required: false },
 
-  learned_lessons: [String],
+  image_url: { type: String, require: true },
+
+  what_will_learn: [String],
 
   review: { type: String, required: false },
 
