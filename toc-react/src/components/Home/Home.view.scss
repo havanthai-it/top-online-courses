@@ -1,6 +1,8 @@
 @import '../../assets/scss/global.scss';
 
 .home-view {
+  position: relative;
+
   .home-main-image {
     display: block;
     width: 100%;
@@ -9,5 +11,50 @@
     background-position: top;
     background-repeat: no-repeat;
     background-size: cover;
+    position: relative;
+    z-index: 0;
+
+    .home-main-image-overlay {
+      width: 100%;
+      height: 480px;
+      z-index: 1;
+      background-image: linear-gradient(to right, black , white);
+      position: absolute;
+      top: 0;
+      left: 0;
+      opacity: 0.6;
+    }
+
+    .main-box {
+      width: 40%;
+      top: 16%;
+      left: 10%;
+      position: absolute;
+      z-index: 2;
+      color: #ffffff;
+
+      @media screen and (max-width: $screenBreakpoint)  {
+        width: 80%;
+      }
+
+      h1 {
+        font-size: 240%;
+        line-height: 1.2em;
+      }
+
+      .search-input {
+        background-color: #ffffff;
+
+        input {
+          padding: 0.8em;
+          font-size: 1.2em;
+        }
+
+        .MuiOutlinedInput-notchedOutline {
+          border: none;
+        }
+      }
+    }
+    
   }
 }

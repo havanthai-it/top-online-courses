@@ -17,7 +17,7 @@ const DropdownMenuView = ({ categories }) => {
             { categories.map((category, index) => {
               // CATEGORY ITEMS
               return (
-                <li key={index} className="category-li"
+                <li key={index} className="category-li" className={index===focusedCategory ? 'li-focused' : null}
                   onMouseEnter={() => setFocusedCategory(index)}>
                   <span>{category.name}</span>
                   <ChevronRight />

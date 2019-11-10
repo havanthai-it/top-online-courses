@@ -19,7 +19,12 @@
         font-weight: 600;
       }
     }
-  }
+
+    .li-focused {
+      background-color: $secondaryBgColor;
+      font-weight: 600;
+    }
+  }  
 
   .category-ul-container {
     background-color: #fefefe;

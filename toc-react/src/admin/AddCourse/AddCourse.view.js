@@ -1,6 +1,10 @@
 import React from 'react';
-import { FormControl, TextField, Select, InputLabel, MenuItem, ListItemText, Checkbox, TextareaAutosize,
-  Chip, Button } from '@material-ui/core';
+import {
+  FormControl, TextField, Select, InputLabel, MenuItem, ListItemText, Checkbox, TextareaAutosize,
+  Chip, Button
+} from '@material-ui/core';
+import CKEditor from '@ckeditor/ckeditor5-react';
+import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
 
 import CategoryService from './../../services/category.service';
 import PlatformService from './../../services/platform.service';
@@ -65,10 +69,10 @@ class AddCourseView extends React.Component {
   }
 
   handleAddWhatWillLearn(event) {
-    if(event.keyCode === 13 && event.target.value) {
+    if (event.keyCode === 13 && event.target.value) {
       const whatWillLearns = this.state.what_will_learn;
       whatWillLearns.push(event.target.value);
-      this.setState({ what_will_learn: whatWillLearns});
+      this.setState({ what_will_learn: whatWillLearns });
       event.target.value = '';
     }
   }
@@ -78,7 +82,7 @@ class AddCourseView extends React.Component {
     if (index > -1) {
       const whatWillLearns = this.state.what_will_learn;
       whatWillLearns.splice(index, 1);
-      this.setState({ what_will_learn: whatWillLearns});
+      this.setState({ what_will_learn: whatWillLearns });
     }
   }
 
@@ -164,8 +168,8 @@ class AddCourseView extends React.Component {
             </FormControl>
             <FormControl>
               <div>Tags:</div>
-              <Select multiple value={this.state.tags} 
-              renderValue={selected => selected.join(', ')} onChange={(event) => this.handleTagSelect(event)}>
+              <Select multiple value={this.state.tags}
+                renderValue={selected => selected.join(', ')} onChange={(event) => this.handleTagSelect(event)}>
                 {
                   this.state.listTags.map((tag, index) => (
                     <MenuItem key={index} value={tag.tag}>
@@ -181,9 +185,9 @@ class AddCourseView extends React.Component {
               <TextField margin="normal" onKeyDown={(event) => this.handleAddWhatWillLearn(event)} />
               <div>
                 {
-                  this.state.what_will_learn.map((item, index) => 
-                    <div key={index}><Chip color="primary" label={item} 
-                    onDelete={(event) => this.handleDeleteWhatWillLearn(event, item)} /></div>)
+                  this.state.what_will_learn.map((item, index) =>
+                    <div key={index}><Chip color="primary" label={item}
+                      onDelete={(event) => this.handleDeleteWhatWillLearn(event, item)} /></div>)
                 }
               </div>
             </FormControl>
@@ -206,7 +210,7 @@ class AddCourseView extends React.Component {
             <FormControl>
               <div>Level:</div>
               <Select value={this.state.level}
-              onChange={(event) => this.handleLevelSelect(event)}>
+                onChange={(event) => this.handleLevelSelect(event)}>
                 <MenuItem value={'All level'}><ListItemText primary={'All level'} /></MenuItem>
                 <MenuItem value={'Beginner'}><ListItemText primary={'Beginner'} /></MenuItem>
                 <MenuItem value={'Intermediate'}><ListItemText primary={'Intermediate'} /></MenuItem>
@@ -216,7 +220,7 @@ class AddCourseView extends React.Component {
             <FormControl>
               <div>Has certificate:</div>
               <Select value={this.state.has_certificate}
-              onChange={(event) => this.handleHasCertificateSelect(event)}>
+                onChange={(event) => this.handleHasCertificateSelect(event)}>
                 <MenuItem value={true}><ListItemText primary={'Yes'} /></MenuItem>
                 <MenuItem value={false}><ListItemText primary={'No'} /></MenuItem>
               </Select>
@@ -232,7 +236,7 @@ class AddCourseView extends React.Component {
             <FormControl>
               <div>Platform:</div>
               <Select value={this.state.platform}
-              onChange={(event) => this.handlePlatformSelect(event)}>
+                onChange={(event) => this.handlePlatformSelect(event)}>
                 {
                   this.state.listPlatforms.map((platform, index) => (
                     <MenuItem key={index} value={platform.name}>
@@ -246,6 +250,28 @@ class AddCourseView extends React.Component {
               <div>Url:</div>
               <TextField margin="normal" onChange={(event) => this.handleUrl(event)} />
             </FormControl>
+          </div>
+
+          <div>
+            <h2>Review:</h2>
+            <CKEditor
+              editor={ClassicEditor}
+              data="<p>Hello from CKEditor 5!</p>"
+              onInit={editor => {
+                // You can store the "editor" and use when it is needed.
+                console.log('Editor is ready to use!', editor);
+              }}
+              onChange={(event, editor) => {
+                const data = editor.getData();
+                console.log({ event, editor, data });
+              }}
+              onBlur={(event, editor) => {
+                console.log('Blur.', editor);
+              }}
+              onFocus={(event, editor) => {
+                console.log('Focus.', editor);
+              }}
+            />
           </div>
 
           <div className="g-text-center">

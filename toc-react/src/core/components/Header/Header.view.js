@@ -26,7 +26,7 @@ class HeaderView extends React.Component {
     return (
       <div className="header-view">
         <header>
-          <div className="logo-container">
+          <div className="logo-container g-text-center">
             TOP ONLINE COURSES
           </div>
 
@@ -41,6 +41,9 @@ class HeaderView extends React.Component {
                   ? <DropdownMenu categories={this.state.categories} />
                   : null
                 }
+              </li>
+              <li className="nav-li">
+                <Button color="primary">Blog</Button>
               </li>
             </ul>
           </div>
