@@ -1,0 +1,36 @@
+.tab-list-courses-horizontal {
+  
+  .MuiTabs-root {
+
+    .MuiTabs-flexContainer {
+      display: inline-block;
+      
+      .MuiButtonBase-root {
+        min-width: fit-content;
+      }
+  
+      .MuiTab-wrapper {
+        cursor: pointer;
+        font-weight: 600;
+      }
+
+      .MuiTouchRipple-root {
+        height: 0;
+      }
+  
+    }
+
+    [class^="PrivateTabIndicator-root-"] {
+      height: 4px;
+      transition-delay: 0ms;
+      -webkit-transition-delay: 0ms;
+    }
+  }
+
+  hr {
+    height: 1px;
+    background-color: #dddddd;
+    border: none;
+  }
+  
+}

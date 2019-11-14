@@ -5,6 +5,7 @@ import Home from './components/Home/Home.container';
 import Category from './components/Category/Category.container';
 import Topic from './components/Topic/Topic.container';
 import Tag from './components/Tag/Tag.container';
+import Blog from './components/Blog/Blog.container';
 
 const RouterOutlet = () => {
   return (
@@ -12,6 +13,7 @@ const RouterOutlet = () => {
       <Route exact path='/admin' component={Admin} />
       <Route exact path='/' component={Home} />
       <Route exact path='/home' component={Home} />
+      <Route exact path='/blog' component={Blog} />
       <Route exact path='/courses/:category' component={Category} />
       <Route exact path='/courses/:category/:topic' component={Topic} />
       <Route exact path='/courses/:category/:topic/:tag' component={Tag} />

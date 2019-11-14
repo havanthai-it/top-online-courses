@@ -1,14 +1,14 @@
 import React from 'react';
 import CourseItem from './CourseItem/CourseItem.container';
 
-import './ListCourses.view.scss';
+import './ListCoursesHorizontalView.view.scss';
 
-const ListCoursesView = ({ listCourses }) => {
+const ListCoursesHorizontalView = ({ listCourses }) => {
   return (
-    <div className="list-courses">
+    <div className="list-courses-horizontal">
       { listCourses.map((course, index) => <CourseItem course={course} index={index} />) }
     </div>
   );
 }
 
-export default ListCoursesView;
+export default ListCoursesHorizontalView;

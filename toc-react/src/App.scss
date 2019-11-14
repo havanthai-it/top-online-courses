@@ -1,8 +1,6 @@
 @import './assets/scss/global.scss';
 
 .app {
-  
-  padding: 0px 20px;
 
   /*---MATERIAL UI---*/
   /*---END MATERIAL UI---*/
@@ -18,6 +16,10 @@
 
   .g-text-right {
     text-align: right;
+  }
+
+  .g-text-bold {
+    font-weight: bold;
   }
 
   .g-noselect {
@@ -36,4 +38,28 @@
     cursor: pointer;
   }
   /*---END MOUSE ACTION---*/
+
+  /*---POSITION---*/
+  .g-float-left {
+    float: left;
+  }
+
+  .g-float-right {
+    float: right;
+  }
+
+  .g-clear-after {
+    &::after {
+      content: "";
+      display: block;
+      clear: both;
+    }
+  }
+  /*---END POSITION---*/
+
+  /*---DISPLAY---*/
+  .g-display-none {
+    display: none
+  }
+  /*---END DISPLAY---*/
 }

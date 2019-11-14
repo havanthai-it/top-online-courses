@@ -256,7 +256,7 @@ class AddCourseView extends React.Component {
             <h2>Review:</h2>
             <CKEditor
               editor={ClassicEditor}
-              data="<p>Hello from CKEditor 5!</p>"
+              data="<p></p>"
               onInit={editor => {
                 // You can store the "editor" and use when it is needed.
                 console.log('Editor is ready to use!', editor);

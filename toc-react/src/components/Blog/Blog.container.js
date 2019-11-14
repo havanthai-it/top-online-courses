@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import ListCoursesView from './ListCourses.view';
+import BlogView from './Blog.view';
 
 const mapStateToProps = (state) => {
   return {
@@ -13,6 +13,6 @@ const mapDispatchToProps = (dispatch) => {
   };
 }
 
-const ListCourses = connect(mapStateToProps, mapDispatchToProps)(ListCoursesView);
+const Blog = connect(mapStateToProps, mapDispatchToProps)(BlogView);
 
-export default ListCourses;
+export default Blog;
