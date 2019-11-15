@@ -21,21 +21,30 @@
     .nav-horizontal {
       position: absolute;
       top: 0;
-      left: 0;
       .nav-ul {
         .nav-li {
           padding: 0;
+          margin: 0px 10px;
           float: left;
 
-          button {
+          .li-label {
             font-weight: 600;
+            cursor: pointer;
           }
 
-          &:hover button {
-            background-color: $primaryBgColor;
+          &:hover {
+            // background-color: $primaryBgColor;
           }
         }
       }
+    }
+
+    .nav-horizontal-left {
+      left: 1%;
+    }
+
+    .nav-horizontal-right {
+      right:1%;
     }
 
     &:after {

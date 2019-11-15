@@ -30,12 +30,12 @@ class HeaderView extends React.Component {
             TOP ONLINE COURSES
           </div>
 
-          <div className="nav-horizontal">
+          <div className="nav-horizontal nav-horizontal-left">
             <ul className="nav-ul">
               <li className="nav-li"
                 onMouseEnter={() => this.setState({ showDropDownMenu: true })}
                 onMouseLeave={() => this.setState({ showDropDownMenu: false })}>
-                <Button color="primary">Categories</Button>
+                <span className="li-label">Categories</span>
                 {
                   this.state.showDropDownMenu && this.state.categories.length > 0
                   ? <DropdownMenu categories={this.state.categories} />
@@ -43,7 +43,15 @@ class HeaderView extends React.Component {
                 }
               </li>
               <li className="nav-li">
-                <Button color="primary">Blog</Button>
+              <span className="li-label">Blog</span>
+              </li>
+            </ul>
+          </div>
+
+          <div className="nav-horizontal nav-horizontal-right">
+            <ul className="nav-ul">
+              <li className="nav-li">
+                <span className="li-label">Subscribe us</span>
               </li>
             </ul>
           </div>

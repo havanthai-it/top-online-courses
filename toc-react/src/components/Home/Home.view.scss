@@ -23,6 +23,10 @@
       top: 0;
       left: 0;
       opacity: 0.6;
+
+      @media screen and (max-width: $screenBreakpoint)  {
+        background-image: linear-gradient(to right, black , gray);
+      }
     }
 
     .main-box-container {
@@ -39,6 +43,7 @@
 
       .search-input {
         background-color: #ffffff;
+        margin-top: 20px;
 
         input {
           padding: 0.8em;
@@ -54,7 +59,7 @@
         width: 45%;
 
         @media screen and (max-width: $screenBreakpoint)  {
-          width: 80%;
+          width: 100%;
         }
       }
       
