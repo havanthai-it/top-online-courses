@@ -3,7 +3,7 @@ import HomeView from './Home.view';
 
 const mapStateToProps = (state) => {
   return {
-
+    
   };
 }
 
